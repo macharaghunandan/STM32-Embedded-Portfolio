@@ -48,3 +48,9 @@ This project replaces a standard digital GPIO matrix keyboard with an analog res
 * **Serial Output:** Decoded characters are transmitted via UART for real-time host interaction.
 
 **🔗 [Click here to view the Code and Architecture files](./Analog-Resistor-Keyboard)**
+
+
+## 5. Digital Matrix Keyboard (WIP)
+**Platform:** STM32 | **Status:** Simulation Troubleshooting
+* **Description:** A work-in-progress build documenting the debugging process of a 6x5 matrix scanning algorithm. Highlights code isolation techniques and Proteus simulation constraints regarding floating GPIO inputs.
+**🔗 [Click here to view the Troubleshooting Log & Code](./Digital-Matrix-Keyboard-WIP)**
