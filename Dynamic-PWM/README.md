@@ -36,3 +36,14 @@ __HAL_TIM_SET_AUTORELOAD(&htim2, map_arr);
 
 // Update the pulse width threshold
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, map_ccr);
+
+```
+
+### 4. Serial Telemetry (huart1)
+The system initializes USART1 at a 9600 baud rate. It formats the raw ADC data into a string buffer via sprintf and transmits it over UART for real-time serial monitoring.
+
+Core Files Included:
+
+main.c:  Contains the peripheral initializations, the custom mapping logic, and the main execution loop.
+
+FINAL_PWM_VARU_USING_POTENTIOMETER.pdsprj:  The circuit simulation validating the microcontroller logic.
