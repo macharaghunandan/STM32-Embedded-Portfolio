@@ -23,3 +23,15 @@ This project demonstrates non-blocking serial communication using hardware inter
 * **Real-Time String Parsing:** Evaluates a shifting buffer array to detect specific keyword triggers (e.g., "hi") and dynamically transmits a programmed string response.
 
 **🔗 [Click here to view the Code and Proteus Simulation files](./UART-Interrupt-Parsing)**
+
+
+
+## 3. I2C Sensor Interfacing & Bit-Shifting
+**Platform:** STM32F401CC | **Protocol:** I2C, UART
+
+### Functional Logic
+This project bypasses standard sensor libraries to manually execute I2C communication with an SHT21 environmental sensor. 
+* **Master/Slave Protocol:** Manages 7-bit device addressing and transmits specific hex commands to trigger hardware-level measurements.
+* **Data Processing:** Utilizes C bit-shifting and masking to reconstruct split data bytes (MSB/LSB) into readable 16-bit integers before applying physical conversion formulas.
+
+**🔗 [Click here to view the Code and Architecture files](./I2C-SHT21-Sensor)**
