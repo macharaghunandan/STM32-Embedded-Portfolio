@@ -35,3 +35,16 @@ This project bypasses standard sensor libraries to manually execute I2C communic
 * **Data Processing:** Utilizes C bit-shifting and masking to reconstruct split data bytes (MSB/LSB) into readable 16-bit integers before applying physical conversion formulas.
 
 **🔗 [Click here to view the Code and Architecture files](./I2C-SHT21-Sensor)**
+
+
+
+## 4. Single-Pin Analog Keyboard (Resistor Ladder)
+**Platform:** STM32 | **Protocol:** ADC, UART
+
+### Functional Logic
+This project replaces a standard digital GPIO matrix keyboard with an analog resistor ladder network to severely reduce pin consumption.
+* **Analog Voltage Decoding:** Each keypress generates a unique voltage drop read by the STM32's ADC.
+* **Threshold Windowing:** Implemented a custom mathematical grouping algorithm in C to eliminate analog noise and map fluctuating 12-bit raw values into reliable, discrete ASCII keystrokes.
+* **Serial Output:** Decoded characters are transmitted via UART for real-time host interaction.
+
+**🔗 [Click here to view the Code and Architecture files](./Analog-Resistor-Keyboard)**
