@@ -54,3 +54,13 @@ This project replaces a standard digital GPIO matrix keyboard with an analog res
 **Platform:** STM32 | **Status:** Simulation Troubleshooting
 * **Description:** A work-in-progress build documenting the debugging process of a 6x5 matrix scanning algorithm. Highlights code isolation techniques and Proteus simulation constraints regarding floating GPIO inputs.
 **🔗 [Click here to view the Troubleshooting Log & Code](./Digital-Matrix-Keyboard-WIP)**
+
+## 6. Cascaded Shift Register Countdown Timer
+**Platform:** STM32 | **Hardware:** 74HC595, 7-Segment Displays
+
+### Functional Logic
+This project drives multi-digit displays using minimal GPIO pins by bit-banging data into daisy-chained shift registers.
+* **Serial-to-Parallel Conversion:** Implemented custom bit-banging logic in C to shift 16-bit data packets via Data, Clock, and Latch pins.
+* **Non-Blocking Architecture:** Utilizes `HAL_GetTick()` to execute a 1-second countdown timer without halting the CPU, allowing concurrent UART polling for real-time user input.
+
+**🔗 [Click here to view the Code and Architecture files](./Shift-Register-7Segment)**
